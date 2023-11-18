@@ -26,7 +26,9 @@ when@test:
     doctrine:
         dbal:
             # "TEST_TOKEN" is typically set by ParaTest
+            #user: root # не работает, видимо url где-то выше перекрывает
             dbname_suffix: '_test%env(default::TEST_TOKEN)%'
+            #url: mysql://root:!ChangeMe!@database:3306/app?serverVersion=8.0.34&charset=utf8mb4
 
 when@prod:
     doctrine:
