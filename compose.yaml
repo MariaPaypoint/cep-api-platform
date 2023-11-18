@@ -45,8 +45,8 @@ services:
   database:
     container_name: database
     image: percona:8.0.34-26-centos
-    command: mysqld --default-authentication-plugin=mysql_native_password --default-authentication-plugin=mysql_native_password
-    #restart: always
+    command: mysqld
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-!ChangeMe!}
       MYSQL_DATABASE: ${MYSQL_DB:-app}
