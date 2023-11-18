@@ -6,7 +6,7 @@ services:
     container_name: php
     depends_on:
       - database
-    #restart: unless-stopped
+    restart: unless-stopped
     environment:
       PWA_UPSTREAM: pwa:3000
       SERVER_NAME: ${SERVER_NAME:-localhost}, php:80
